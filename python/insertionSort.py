@@ -1,0 +1,21 @@
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+    return arr
+
+
+arr = []
+x = int(input("Enter the no of elements of the array : "))
+print("Enter the elements of array one by one : ")
+
+for i in range(x):
+    n = int(input())
+    arr.append(n)
+
+sorted_arr = insertion_sort(arr)
+print("Sorted array is:", sorted_arr)
